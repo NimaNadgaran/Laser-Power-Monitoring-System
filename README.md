@@ -42,3 +42,12 @@ Python then reads these values in real time and plots them using **Matplotlib**.
 - **Required Python libraries:**
   ```bash
   pip install pyserial matplotlib
+
+##📁 Project Structure
+```
+Gentec_310_Series_Monitor/
+├── Gentec_310_Series_Manual.pdf
+├── README.md
+├── arduino_readingSignal.ino
+└── python_inputGraph.py
+```
