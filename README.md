@@ -35,6 +35,26 @@ Python then reads these values in real time and plots them using **Matplotlib**.
 
 ---
 
+## 🧪 Calibration
+
+To get accurate power readings, you must calibrate your system:
+
+1. Check your Gentec 310 Series Manual (included in Gentec_310_Series_Manual.pdf) for your sensor’s responsivity (V/W). (In this case it was *0.130*)
+
+2. Replace the value in this line in your Arduino code:
+```
+float power = voltage / 0.130;
+```
+
+with your actual sensitivity constant, e.g.:
+```
+float power = voltage / 0.145; // if your sensor’s responsivity is 0.145 V/W
+```
+
+3. Optionally, use a known laser power source and compare measured readings to fine-tune this constant.
+
+4. For higher precision, you can also log data in Python and perform linear regression calibration.
+
 ## 💻 Software Requirements
 
 - **Arduino IDE** (for uploading the code)
@@ -42,6 +62,19 @@ Python then reads these values in real time and plots them using **Matplotlib**.
 - **Required Python libraries:**
   ```bash
   pip install pyserial matplotlib
+
+## 🚀 How to Run
+
+1. Upload the Arduino sketch using Arduino IDE.
+
+2. Connect the Gentec sensor’s signal and ground to the Arduino.
+
+3. Run the Python script:
+```
+python python_inputGraph.py
+```
+
+4. Observe a live plot of your laser power over time.
 
 ##📁 Project Structure
 ```
@@ -52,5 +85,5 @@ Gentec_310_Series_Monitor/
 └── python_inputGraph.py
 ```
 
-# Nima Nadgaran
-# 💻 [GitHub Profile](https://github.com/NimaNadgaran)
+**Nima Nadgaran**
+**💻 GitHub Profile: https://github.com/NimaNadgaran**
