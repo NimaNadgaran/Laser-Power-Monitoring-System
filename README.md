@@ -51,3 +51,6 @@ Gentec_310_Series_Monitor/
 ├── arduino_readingSignal.ino
 └── python_inputGraph.py
 ```
+
+# Nima Nadgaran
+# 💻 [GitHub Profile](https://github.com/NimaNadgaran)
